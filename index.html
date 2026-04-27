@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="title">
+            <h1>Drum Machine</h1>
+        </div>
+        <div class="card">
+            <div class="audio-board">
+                <div class="tomRow row">
+                    <div class="audio tom-btn">
+                        <p>Tom</p>
+                        <audio id="tAudio">
+                            <source src="resources/tom.wav">
+                        </audio>
+                    </div>
+                    <div class="squares">
+                        <div class="square tom tom1"></div>
+                        <div class="square tom tom2"></div>
+                        <div class="square tom tom3"></div>
+                        <div class="square tom tom4"></div>
+                        <div class="square tom tom5"></div>
+                        <div class="square tom tom6"></div>
+                        <div class="square tom tom7"></div>
+                        <div class="square tom tom8"></div>
+                        <div class="square tom tom9"></div>
+                        <div class="square tom tom10"></div>
+                        <div class="square tom tom11"></div>
+                        <div class="square tom tom12"></div>
+                        <div class="square tom tom13"></div>
+                        <div class="square tom tom14"></div>
+                        <div class="square tom tom15"></div>
+                        <div class="square tom tom16"></div>
+                    </div>
+                </div>
+                <div class="clapRow row">
+                    <div class="audio clap-btn">
+                        <p>Clap</p>
+                        <audio id="cAudio">
+                            <source src="resources/clap.wav">
+                        </audio>
+                    </div>
+                    <div class="squares">
+                        <div class="square clap clap1"></div>
+                        <div class="square clap clap2"></div>
+                        <div class="square clap clap3"></div>
+                        <div class="square clap clap4"></div>
+                        <div class="square clap clap5"></div>
+                        <div class="square clap clap6"></div>
+                        <div class="square clap clap7"></div>
+                        <div class="square clap clap8"></div>
+                        <div class="square clap clap9"></div>
+                        <div class="square clap clap10"></div>
+                        <div class="square clap clap11"></div>
+                        <div class="square clap clap12"></div>
+                        <div class="square clap clap13"></div>
+                        <div class="square clap clap14"></div>
+                        <div class="square clap clap15"></div>
+                        <div class="square clap clap16"></div>
+                    </div>
+                </div>
+                <div class="boomRow row">
+                    <div class="audio boom-btn">
+                        <p>Boom</p>
+                        <audio id="bAudio">
+                            <source src="resources/boom.wav">
+                        </audio>
+                    </div>
+                    <div class="squares">
+                        <div class="square boom boom1"></div>
+                        <div class="square boom boom2"></div>
+                        <div class="square boom boom3"></div>
+                        <div class="square boom boom4"></div>
+                        <div class="square boom boom5"></div>
+                        <div class="square boom boom6"></div>
+                        <div class="square boom boom7"></div>
+                        <div class="square boom boom8"></div>
+                        <div class="square boom boom9"></div>
+                        <div class="square boom boom10"></div>
+                        <div class="square boom boom11"></div>
+                        <div class="square boom boom12"></div>
+                        <div class="square boom boom13"></div>
+                        <div class="square boom boom14"></div>
+                        <div class="square boom boom15"></div>
+                        <div class="square boom boom16"></div>
+                    </div>
+                </div>
+                <div class="rideRow row">
+                    <div class="audio ride-btn">
+                        <p>Ride</p>
+                        <audio id="rAudio">
+                            <source src="resources/ride.wav">
+                        </audio>
+                    </div>
+                    <div class="squares">
+                        <div class="square ride ride1"></div>
+                        <div class="square ride ride2"></div>
+                        <div class="square ride ride3"></div>
+                        <div class="square ride ride4"></div>
+                        <div class="square ride ride5"></div>
+                        <div class="square ride ride6"></div>
+                        <div class="square ride ride7"></div>
+                        <div class="square ride ride8"></div>
+                        <div class="square ride ride9"></div>
+                        <div class="square ride ride10"></div>
+                        <div class="square ride ride11"></div>
+                        <div class="square ride ride12"></div>
+                        <div class="square ride ride13"></div>
+                        <div class="square ride ride14"></div>
+                        <div class="square ride ride15"></div>
+                        <div class="square ride ride16"></div>
+                    </div>
+                </div>
+
+                <div class="closedHatRow row">
+                    <div class="audio closedhat-btn">
+                        <p>Closed Hat</p>
+                        <audio id="chAudio">
+                            <source src="resources/closedhat.wav">
+                        </audio>
+                    </div>
+                    <div class="squares">
+                        <div class="square closedhat closedhat1"></div>
+                        <div class="square closedhat closedhat2"></div>
+                        <div class="square closedhat closedhat3"></div>
+                        <div class="square closedhat closedhat4"></div>
+                        <div class="square closedhat closedhat5"></div>
+                        <div class="square closedhat closedhat6"></div>
+                        <div class="square closedhat closedhat7"></div>
+                        <div class="square closedhat closedhat8"></div>
+                        <div class="square closedhat closedhat9"></div>
+                        <div class="square closedhat closedhat10"></div>
+                        <div class="square closedhat closedhat11"></div>
+                        <div class="square closedhat closedhat12"></div>
+                        <div class="square closedhat closedhat13"></div>
+                        <div class="square closedhat closedhat14"></div>
+                        <div class="square closedhat closedhat15"></div>
+                        <div class="square closedhat closedhat16"></div>
+                    </div>
+                </div>
+
+                <div class="openHatRow row">
+                    <div class="audio openhat-btn">
+                        <p>Open Hat</p>
+                        <audio id="oAudio">
+                            <source src="resources/openhat.wav">
+                        </audio>
+                    </div>
+                    <div class="squares">
+                        <div class="square openhat openhat1"></div>
+                        <div class="square openhat openhat2"></div>
+                        <div class="square openhat openhat3"></div>
+                        <div class="square openhat openhat4"></div>
+                        <div class="square openhat openhat5"></div>
+                        <div class="square openhat openhat6"></div>
+                        <div class="square openhat openhat7"></div>
+                        <div class="square openhat openhat8"></div>
+                        <div class="square openhat openhat9"></div>
+                        <div class="square openhat openhat10"></div>
+                        <div class="square openhat openhat11"></div>
+                        <div class="square openhat openhat12"></div>
+                        <div class="square openhat openhat13"></div>
+                        <div class="square openhat openhat14"></div>
+                        <div class="square openhat openhat15"></div>
+                        <div class="square openhat openhat16"></div>
+                    </div>
+                </div>
+                <div class="snareRow row">
+                    <div class="audio snare-btn">
+                        <p>Snare</p>
+                        <audio id="sAudio">
+                            <source src="resources/snare.wav">
+                        </audio>
+                    </div>
+                    <div class="squares">
+                        <div class="square snare snare1"></div>
+                        <div class="square snare snare2"></div>
+                        <div class="square snare snare3"></div>
+                        <div class="square snare snare4"></div>
+                        <div class="square snare snare5"></div>
+                        <div class="square snare snare6"></div>
+                        <div class="square snare snare7"></div>
+                        <div class="square snare snare8"></div>
+                        <div class="square snare snare9"></div>
+                        <div class="square snare snare10"></div>
+                        <div class="square snare snare11"></div>
+                        <div class="square snare snare12"></div>
+                        <div class="square snare snare13"></div>
+                        <div class="square snare snare14"></div>
+                        <div class="square snare snare15"></div>
+                        <div class="square snare snare16"></div>
+                    </div>
+                </div>
+                <div class="kickRow row">
+                    <div class="audio kick-btn">
+                        <p>Kick</p>
+                        <audio id="kAudio">
+                            <source src="resources/kick.wav">
+                        </audio>
+                    </div>
+                    <div class="squares">
+                        <div class="square kick kick1"></div>
+                        <div class="square kick kick2"></div>
+                        <div class="square kick kick3"></div>
+                        <div class="square kick kick4"></div>
+                        <div class="square kick kick5"></div>
+                        <div class="square kick kick6"></div>
+                        <div class="square kick kick7"></div>
+                        <div class="square kick kick8"></div>
+                        <div class="square kick kick9"></div>
+                        <div class="square kick kick10"></div>
+                        <div class="square kick kick11"></div>
+                        <div class="square kick kick12"></div>
+                        <div class="square kick kick13"></div>
+                        <div class="square kick kick14"></div>
+                        <div class="square kick kick15"></div>
+                        <div class="square kick kick16"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="history-panel">
+                <div>
+                    <p id="history-title">History Log</p>
+                </div>
+                <div id="historyList">
+                </div>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <div class="playback-controls">
+                <button class="btn play" aria-label="Play" title="Play"></button>
+                <button class="btn stop" aria-label="Stop" title="Stop"></button>
+                <button class="btn clear" aria-label="Clear" title="Clear">
+                    <svg id="trash-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 50 50">
+                        <path
+                            d="M 21 2 C 19.354545 2 18 3.3545455 18 5 L 18 7 L 8 7 A 1.0001 1.0001 0 1 0 8 9 L 9 9 L 9 45 C 9 46.654 10.346 48 12 48 L 38 48 C 39.654 48 41 46.654 41 45 L 41 9 L 42 9 A 1.0001 1.0001 0 1 0 42 7 L 32 7 L 32 5 C 32 3.3545455 30.645455 2 29 2 L 21 2 z M 21 4 L 29 4 C 29.554545 4 30 4.4454545 30 5 L 30 7 L 20 7 L 20 5 C 20 4.4454545 20.445455 4 21 4 z M 19 14 C 19.552 14 20 14.448 20 15 L 20 40 C 20 40.553 19.552 41 19 41 C 18.448 41 18 40.553 18 40 L 18 15 C 18 14.448 18.448 14 19 14 z M 25 14 C 25.552 14 26 14.448 26 15 L 26 40 C 26 40.553 25.552 41 25 41 C 24.448 41 24 40.553 24 40 L 24 15 C 24 14.448 24.448 14 25 14 z M 31 14 C 31.553 14 32 14.448 32 15 L 32 40 C 32 40.553 31.553 41 31 41 C 30.447 41 30 40.553 30 40 L 30 15 C 30 14.448 30.447 14 31 14 z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="file-controls">
+                <input type="file" id="importFile" style="display: none;" />
+                <button class="btn import" onclick="document.getElementById('importFile').click()">Import
+                    Pattern</button>
+                <button class="btn export-json" onclick="exportJSON()">Export Pattern</button>
+                <button class="btn export-audio" onclick="exportAudio()">Export Audio</button>
+                <button class="btn export-image" onclick="exportImage()">Export Image</button>
+                <button class="btn save-in-history" onclick="saveInHistory()">Save Pattern</button>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="source.js"></script>
+</body>
+
+</html>

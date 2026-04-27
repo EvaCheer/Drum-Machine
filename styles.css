@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+    background-color: #c0bfbf;
+    color: #313131;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.audio-board {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #a1a1a1;
+    border-radius: 4px;
+
+}
+
+
+.history-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: #818181;
+    width: 220px;
+}
+
+#history-title {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#historyList {
+    height: 350px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.history-entry {
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.history-entry:hover {
+    background-color: #6d6d6d;
+
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.squares {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: #444;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+}
+
+
+.square:nth-child(4n + 1) {
+    background-color: #6d6d6d;
+}
+
+.square:hover {
+
+    background-color: #585858;
+}
+
+.active-square {
+  transform: scale(1.2);
+}
+
+.audio {
+    width: 150px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    background-color: #818181;
+}
+
+.audio:hover {
+    cursor: pointer;
+}
+
+.audio:active {
+    transform: translateY(4px);
+}
+.tom.active { background-color: #00b7d4; opacity: 0.6;}
+.clap.active { background-color: #ff80ff; opacity: 0.6;}
+.boom.active { background-color: #ff962e; opacity: 0.6;}
+.ride.active { background-color: #20e381; opacity: 0.6;}
+.closedhat.active { background-color: #f75959; opacity: 0.6;}
+.openhat.active { background-color: #7659f7; opacity: 0.6;}
+.snare.active { background-color: #1d56b8; opacity: 0.6;}
+.kick.active { background-color: #cde800; opacity: 0.6;}
+
+.btn {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.btn:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.btn:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.playback-controls {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.stop {
+    display: none;
+}
+
+.play, .stop {
+    width: 60px;
+}
+
+.stop:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    width: 24px;
+    height: 24px;
+    background-color: #535353;
+}
+
+.play:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 20px solid #535353;
+    border-bottom: 15px solid transparent;
+}
+
+button svg {
+    color: #535353;
+    width: 24px;
+    height: 24px;
+  fill: currentColor;
+}
